@@ -9,7 +9,7 @@ use Illuminate\Http\Request;
 class CurrencyController extends Controller
 {
     /**
-     * Return the view to get rates
+     * Return the view make request to getRates
      */
     public function getRate()
     {
