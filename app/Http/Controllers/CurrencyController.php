@@ -9,9 +9,7 @@ use Illuminate\Http\Request;
 class CurrencyController extends Controller
 {
     /**
-     * Get current rates
-     * @param  Request $request Amount selected from dropdown
-     * @return [integer]       A view with current rate
+     * Return the view to get rates
      */
     public function getRate()
     {
@@ -22,6 +20,9 @@ class CurrencyController extends Controller
         ]);
     }
 
+    /**
+     * Store the current rates in a database
+     */
     public function storeRate(Request $request)
     {
         $current_rate = Rate::getRates($request->currency_id);
@@ -33,7 +34,7 @@ class CurrencyController extends Controller
 
 
     /**
-     * Will save the rate to the database
+     * Small helper to save data.
      */
     protected function saveRate($currency_type, $current_rate)
     {
