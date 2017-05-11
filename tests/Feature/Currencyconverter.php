@@ -10,6 +10,10 @@ use Illuminate\Foundation\Testing\DatabaseTransactions;
 
 class Currencyconverter extends TestCase
 {
+    /**
+     * [assertConversionWorks description]
+     * @return [integer] Mocked value since We are using an external Service
+     */
     public function assertConversionWorks()
     {
         $currency = 'USD';

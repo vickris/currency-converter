@@ -13,7 +13,7 @@
                         <div class="form-group">
                             <div class="col-md-12">
                                 <label for="currency" class="col-md-4 control-label">Currency</label>
-                                <select class="form-control" name="currency_id">
+                                <select class="form-control" name="currency_name">
                                     @foreach($available_currencies as $currency)
                                         <option value="{{$currency->name}}" name="currency_name">{{$currency->name}}
                                         </option>

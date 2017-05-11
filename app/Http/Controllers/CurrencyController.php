@@ -25,11 +25,11 @@ class CurrencyController extends Controller
      */
     public function storeRate(Request $request)
     {
-        $current_rate = Rate::getRates($request->currency_id);
+        $current_rate = Rate::getRates($request->currency_name);
 
-        $this->saveRate($request->currency_id, (int)$current_rate);
+        $this->saveRate($request->currency_name, (int)$current_rate);
 
-        return back()->withSuccess("The value of $request->currency_id in comparisson with the USD is $current_rate");
+        return back()->withSuccess("The value of $request->currency_name in comparisson with the USD is $current_rate");
     }
 
 
